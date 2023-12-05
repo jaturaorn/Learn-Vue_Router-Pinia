@@ -2,13 +2,7 @@
 import { onMounted } from "vue";
 import { RouterLink, useRoute, useRouter } from "vue-router";
 
-const route = useRoute()
 const router = useRouter()
-
-onMounted(() => {
-    console.log('Params',route.params)
-    console.log('Query',route.query)
-})
 
 const backToHome = () => {
     // ทำอะไรสักอย่างก่อน
