@@ -27,14 +27,17 @@ const updateProfile = () => {
 }
 
 onMounted(() => {
-    console.log(userStore.firstname);
-    console.log(userStore.lastname);
+    firstname.value = userStore.firstname;
+    lastname.value = userStore.lastname;
 })
 </script>
 
 <template>
     <div>
         Profile from stores
+        <div v-if="isUpdated" style="color: blue;">
+        Profile up to date
+    </div>
         <div>Firstname {{ userStore.firstname }}</div>
         <div>Lastname {{ userStore.lastname }} </div>
     </div>
