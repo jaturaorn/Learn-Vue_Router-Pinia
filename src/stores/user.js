@@ -7,6 +7,11 @@ export const useUserStore = defineStore('user', {
         firstname: 'test',
         lastname: 'oo'
     }),
+    getters: {
+        fullname (state) {
+            return `${state.firstname} ${state.lastname}`
+        }
+    },
     actions: {
         changeName (formData) {
             /*
@@ -16,6 +21,7 @@ export const useUserStore = defineStore('user', {
                     firstname: '',
                     lastname: ''
                 }
+
             */
             this.firstname = formData.firstname
             this.lastname = formData.lastname
